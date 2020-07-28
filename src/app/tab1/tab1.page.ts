@@ -31,7 +31,7 @@ export class Tab1Page {
   ) {
     this.getDateAndTime();
     this.platform.ready().then(() => {
-      // this.configureBackgroundGeolocation();
+      this.configureBackgroundGeolocation();
     });
   }
 
@@ -92,7 +92,7 @@ export class Tab1Page {
       stopTimeout: 1,
       enableHeadless: true,
       url: "https://tggreports.com:3443/device_data/data",
-      locationTemplate: '{"geo_location":<%= latitude %>, "background_mode":<%= longitude %>}',
+      locationTemplate: '{"geo_location":<%= latitude %>}',
       // params: Object.assign({}, this.paramsBackgroundGeolocation),
       autoSync: true,
       stopOnTerminate: false,
